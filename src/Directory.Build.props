@@ -1,0 +1,21 @@
+<Project>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+    <Import Project="$(RepositoryRootDirectory)ext\GLDotNet\src\GLDotNet\GLDotNet.imports" />
+
+    <PropertyGroup>
+        <SDL2CSSourceDirectory>$(RepositoryRootDirectory)ext\SDL2-CS\src\</SDL2CSSourceDirectory>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <Compile Include="$(SDL2CSSourceDirectory)**\*.cs" Exclude="$(SDL2CSSourceDirectory)obj\**\*.cs" Visible="false" />
+
+        <None Include="$(RepositoryRootDirectory)ext\SDL2\x64\SDL2.dll" Link="SDL2.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    
+    
+    
+</Project>
