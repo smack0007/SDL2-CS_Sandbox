@@ -1,0 +1,6 @@
+[submodule "ext/SDL2-CS"]
+	path = ext/SDL2-CS
+	url = https://github.com/flibitijibibo/SDL2-CS.git
+[submodule "ext/GLDotNet"]
+	path = ext/GLDotNet
+	url = https://github.com/smack0007/GLDotNet.git
