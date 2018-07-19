@@ -2,6 +2,7 @@
 using static SDL2.SDL;
 using static SDL2.SDL.SDL_EventType;
 using static SDL2.SDL.SDL_GLattr;
+using static SDL2.SDL.SDL_GLprofile;
 using static SDL2.SDL.SDL_Keycode;
 using static SDL2.SDL.SDL_WindowFlags;
 
@@ -35,7 +36,7 @@ namespace Sandbox
 
             SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
             SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
-            SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, 0x0001);
+            SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
             IntPtr glContext = SDL_GL_CreateContext(window);
 
